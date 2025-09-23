@@ -4,7 +4,14 @@
 
 - 原始脚本来自 [shidahuilang/pve](https://github.com/shidahuilang/pve/blob/main/pve.sh)
 
-- 轻微修改，简化优化、支持 PVE9！
+- 优化部分代码，支持 PVE9！
+```
+动态识别 NVME 磁盘，支持 AMD CPU 温度（包括核显）；
+CPU 频率支持超多核心（4 核心显示一行，16 核就显示四行）；
+CPU 温度支持超多核心（4 核心显示一行，16 核就显示四行）；
+可移除旧内核(危险操作，谨慎！！！)；
+其他修复和精简代码。
+```
 
 - **修改 PVE 存在风险，请自行备份重要数据；出现任何风险，自行承担！**
 
@@ -19,6 +26,14 @@ bash -c "$(curl -fsSL https://raw.githubusercontent.com/xiangfeidexiaohuo/pve-di
 ```
 
 ![png](./pic/56.png)
+
+
+- **高度变量：**
+
+某些CPU核心过多，或者想显示那个PVE存储库那一行，导致高度不够，脚本下载到本地，修改69为合适的数字，如80、100等。
+
+![png](./pic/57.png)
+
 
 ***
 
